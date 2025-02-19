@@ -169,7 +169,7 @@ class Slave(Node):
 
         for i in range(door_dist-1):
             for i, j in [(-1, 0)]:  # Coordinates for 4 surrounding robots
-                pygame.draw.rect(screen, RED, ((self.x + i) * CELL_SIZE, (self.y + j) * CELL_SIZE, CELL_SIZE, CELL_SIZE))
+                pygame.draw.rect(self.screen, RED, ((self.x + i) * CELL_SIZE, (self.y + j) * CELL_SIZE, CELL_SIZE, CELL_SIZE))
               # pygame.draw.rect(screen, WHITE, ((new_pose_x+ i) * CELL_SIZE, (new_pose_y + j) * CELL_SIZE, CELL_SIZE, CELL_SIZE),1)
             time.sleep(0.5)
             path_forward.append((self.y + self.vel_y,self.x+self.vel_x))

@@ -1,0 +1,4 @@
+Invoking command in '/home/janhavi/drone_swarm_py/build/swarm_com': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/janhavi/drone_swarm_py/build/swarm_com -- -j12 -l12
+Invoked command in '/home/janhavi/drone_swarm_py/build/swarm_com' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/janhavi/drone_swarm_py/build/swarm_com -- -j12 -l12
+Invoking command in '/home/janhavi/drone_swarm_py/build/swarm_com': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/janhavi/drone_swarm_py/build/swarm_com
+Invoked command in '/home/janhavi/drone_swarm_py/build/swarm_com' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/janhavi/drone_swarm_py/build/swarm_com

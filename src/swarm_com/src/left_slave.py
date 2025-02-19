@@ -170,7 +170,7 @@ class Slave(Node):
 
         for i in range(door_dist-1):
             for i, j in [(-1, 0)]:  # Coordinates for 4 surrounding robots
-                pygame.draw.rect(screen, RED, ((self.x + i) * CELL_SIZE, (self.y + j) * CELL_SIZE, CELL_SIZE, CELL_SIZE))
+                pygame.draw.rect(self.screen, RED, ((self.x + i) * CELL_SIZE, (self.y + j) * CELL_SIZE, CELL_SIZE, CELL_SIZE))
               # pygame.draw.rect(screen, WHITE, ((new_pose_x+ i) * CELL_SIZE, (new_pose_y + j) * CELL_SIZE, CELL_SIZE, CELL_SIZE),1)
             time.sleep(0.5)
             path_forward.append((self.y + self.vel_y,self.x+self.vel_x))
@@ -232,7 +232,7 @@ class Slave(Node):
                     self.x = j 
                     self.y = i
                     print(self.x+1,self.y,self.checkpoint)
-                    pygame.draw.rect(screen, GREEN, (j * CELL_SIZE, i * CELL_SIZE, CELL_SIZE, CELL_SIZE))
+                    pygame.draw.rect(self.screen, GREEN, (j * CELL_SIZE, i * CELL_SIZE, CELL_SIZE, CELL_SIZE))
                     pygame.display.flip()
                     if (self.x+1 == self.checkpoint[0]) and (self.y == self.checkpoint[1]):
                         break_flag = 1
@@ -325,4 +325,3 @@ if __name__ == "__main__":
 
 
    
-

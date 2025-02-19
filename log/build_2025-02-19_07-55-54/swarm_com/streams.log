@@ -1,0 +1,52 @@
+[0.005s] Invoking command in '/home/janhavi/drone_swarm_py/build/swarm_com': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/janhavi/drone_swarm_py/src/swarm_com -DCMAKE_INSTALL_PREFIX=/home/janhavi/drone_swarm_py/install/swarm_com
+[0.106s] -- The C compiler identification is GNU 11.4.0
+[0.185s] -- The CXX compiler identification is GNU 11.4.0
+[0.194s] -- Detecting C compiler ABI info
+[0.262s] -- Detecting C compiler ABI info - done
+[0.269s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.269s] -- Detecting C compile features
+[0.269s] -- Detecting C compile features - done
+[0.272s] -- Detecting CXX compiler ABI info
+[0.336s] -- Detecting CXX compiler ABI info - done
+[0.341s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.341s] -- Detecting CXX compile features
+[0.341s] -- Detecting CXX compile features - done
+[0.346s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.570s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.642s] -- Found rclpy: 3.3.15 (/opt/ros/humble/share/rclpy/cmake)
+[0.643s] -- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)
+[0.676s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.681s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.689s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.699s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.711s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.729s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.739s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.791s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.792s] -- Added test 'lint_cmake' to check CMake code style
+[0.792s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.793s] -- Added test 'xmllint' to check XML markup files
+[0.794s] -- Configuring done
+[0.795s] -- Generating done
+[0.796s] -- Build files have been written to: /home/janhavi/drone_swarm_py/build/swarm_com
+[0.802s] Invoked command in '/home/janhavi/drone_swarm_py/build/swarm_com' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/janhavi/drone_swarm_py/src/swarm_com -DCMAKE_INSTALL_PREFIX=/home/janhavi/drone_swarm_py/install/swarm_com
+[0.802s] Invoking command in '/home/janhavi/drone_swarm_py/build/swarm_com': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/janhavi/drone_swarm_py/build/swarm_com -- -j12 -l12
+[0.829s] Invoked command in '/home/janhavi/drone_swarm_py/build/swarm_com' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/janhavi/drone_swarm_py/build/swarm_com -- -j12 -l12
+[0.838s] Invoking command in '/home/janhavi/drone_swarm_py/build/swarm_com': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/janhavi/drone_swarm_py/build/swarm_com
+[0.844s] -- Install configuration: ""
+[0.845s] -- Installing: /home/janhavi/drone_swarm_py/install/swarm_com/share/ament_index/resource_index/package_run_dependencies/swarm_com
+[0.845s] -- Installing: /home/janhavi/drone_swarm_py/install/swarm_com/share/ament_index/resource_index/parent_prefix_path/swarm_com
+[0.845s] -- Installing: /home/janhavi/drone_swarm_py/install/swarm_com/share/swarm_com/environment/ament_prefix_path.sh
+[0.845s] -- Installing: /home/janhavi/drone_swarm_py/install/swarm_com/share/swarm_com/environment/ament_prefix_path.dsv
+[0.845s] -- Installing: /home/janhavi/drone_swarm_py/install/swarm_com/share/swarm_com/environment/path.sh
+[0.845s] -- Installing: /home/janhavi/drone_swarm_py/install/swarm_com/share/swarm_com/environment/path.dsv
+[0.845s] -- Installing: /home/janhavi/drone_swarm_py/install/swarm_com/share/swarm_com/local_setup.bash
+[0.845s] -- Installing: /home/janhavi/drone_swarm_py/install/swarm_com/share/swarm_com/local_setup.sh
+[0.845s] -- Installing: /home/janhavi/drone_swarm_py/install/swarm_com/share/swarm_com/local_setup.zsh
+[0.845s] -- Installing: /home/janhavi/drone_swarm_py/install/swarm_com/share/swarm_com/local_setup.dsv
+[0.846s] -- Installing: /home/janhavi/drone_swarm_py/install/swarm_com/share/swarm_com/package.dsv
+[0.846s] -- Installing: /home/janhavi/drone_swarm_py/install/swarm_com/share/ament_index/resource_index/packages/swarm_com
+[0.846s] -- Installing: /home/janhavi/drone_swarm_py/install/swarm_com/share/swarm_com/cmake/swarm_comConfig.cmake
+[0.846s] -- Installing: /home/janhavi/drone_swarm_py/install/swarm_com/share/swarm_com/cmake/swarm_comConfig-version.cmake
+[0.846s] -- Installing: /home/janhavi/drone_swarm_py/install/swarm_com/share/swarm_com/package.xml
+[0.848s] Invoked command in '/home/janhavi/drone_swarm_py/build/swarm_com' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/janhavi/drone_swarm_py/build/swarm_com
