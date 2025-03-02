@@ -62,9 +62,10 @@ for j in range(30):
             grid[j][i] = 1
         else:
             grid[j][i] = 2
+
 class Slave(Node):
     def __init__(self,name,screen):
-        super().__init__('right_publisher')
+        super().__init__(name)
 
         self.vel_x = -1
         self.vel_y = 0
@@ -104,7 +105,6 @@ class Slave(Node):
     def subscribe_mast_init(self):
         self.create_subscription(Int32MultiArray, 'Right_Detatch_Data', self.subscriber_mast_callback, 10)
 
-
     def get_lidar_scan(matrix, x, y):
         lidar_scan = []
         rows, cols = len(matrix), len(matrix[0])
@@ -125,21 +125,19 @@ class Slave(Node):
     def path_to_master(self):
         x_dist = abs(self.mast_loc[1] - self.checkpoint[1])
         y_dist = abs(self.mast_loc[0] - self.checkpoint[0])
-        print(self.checkpoint)
-        print("dist:",x_dist,y_dist,self.x,self.y)
-
+    
         for i in range(x_dist-1):
             self.y-=1
-            pygame.draw.rect(screen, RED, ((self.x) * CELL_SIZE, (self.y) * CELL_SIZE, CELL_SIZE, CELL_SIZE))
+            pygame.draw.rect(self.screen, RED, ((self.x) * CELL_SIZE, (self.y) * CELL_SIZE, CELL_SIZE, CELL_SIZE))
             pygame.display.flip()
             time.sleep(0.5)
         for i in range(y_dist):
             self.x+=1
-            pygame.draw.rect(screen, RED, ((self.x) * CELL_SIZE, (self.y) * CELL_SIZE, CELL_SIZE, CELL_SIZE))
+            pygame.draw.rect(self.screen, RED, ((self.x) * CELL_SIZE, (self.y) * CELL_SIZE, CELL_SIZE, CELL_SIZE))
             pygame.display.flip()
             time.sleep(0.5)
-        self.x+= 1
-        pygame.draw.rect(screen, RED, ((self.x) * CELL_SIZE, (self.y) * CELL_SIZE, CELL_SIZE, CELL_SIZE))
+        
+        pygame.draw.rect(self.screen, RED, ((self.x) * CELL_SIZE, (self.y) * CELL_SIZE, CELL_SIZE, CELL_SIZE))
         pygame.display.flip()
         time.sleep(0.5)
 
@@ -167,25 +165,16 @@ class Slave(Node):
         self.checkpoint = [self.x,self.y]
 
         for i in range(door_dist-1):
-            for i, j in [(-1, 0)]:  # Coordinates for 4 surrounding robots
-                pygame.draw.rect(self.screen, RED, ((self.x + i) * CELL_SIZE, (self.y + j) * CELL_SIZE, CELL_SIZE, CELL_SIZE))
-              # pygame.draw.rect(screen, WHITE, ((new_pose_x+ i) * CELL_SIZE, (new_pose_y + j) * CELL_SIZE, CELL_SIZE, CELL_SIZE),1)
-            time.sleep(0.5)
-            path_forward.append((self.y + self.vel_y,self.x+self.vel_x))
+            pygame.draw.rect(self.screen, RED, ((self.x) * CELL_SIZE, (self.y) * CELL_SIZE, CELL_SIZE, CELL_SIZE))
+            path_forward.append((self.y + self.vel_y, self.x + self.vel_x))
             self.x += self.vel_x
-            self.y += self.vel_y 
+            self.y += self.vel_y
             pygame.display.flip()
-        print(self.checkpoint)
-        print(self.x,self.y)
+
         while break_flag != 1:
-            print(break_flag)
-            print(self.x,self,y)
-            # Extract the lidar_scan
             padded_matrix = np.pad(self.grid, 3, mode='constant', constant_values=1)
             extracted_array = padded_matrix[self.y:self.y+7, self.x:self.x+7]
             lidar_scan =  extracted_array
-            # print(lidar_scan)
-
             
             neighbor_indices = []
             if lidar_scan[3, 2] != 1:  
@@ -194,42 +183,37 @@ class Slave(Node):
                 neighbor_indices.append((- 1,- 1))
             if lidar_scan[4, 2] != 1:  
                 neighbor_indices.append((-1, 1))
-            print(neighbor_indices)
             
-            # print(np.array(lidar_scan))
             if len(neighbor_indices) > 0:
                 choice = neighbor_indices[random.randint(0,len(neighbor_indices)-1)]
                 
                 self.vel_x = choice[0]
                 self.vel_y = choice[1]
-                # print(self.vel_x,self.vel_y)
-                print(self.x+self.vel_x,self.vel_y+self.y)
+                
                 obstacles = []
                 for i in range(len(lidar_scan)):
                     for j in range(len(lidar_scan[0])):
                         if lidar_scan[i][j] == 1:
                             if (self.y+i-3,self.x+j-3) not in obstacles:
                                 obstacles.append((self.y+i-3,self.x+j-3))
-                # print(obstacles)
+                
                 self.obstacles.append(obstacles)
                 path_forward.append((self.y + self.vel_y,self.x+self.vel_x))
                 
                 if ((self.y + self.vel_y,self.x+self.vel_x) not in obstacles and 
-                    self.x + self.vel_x <29 and self.y + self.vel_y <29 and 
-                    self.x + self.vel_x >0 and self.y + self.vel_y >0 ) :
+                        self.x + self.vel_x <29 and self.y + self.vel_y <29 and 
+                        self.x + self.vel_x >0 and self.y + self.vel_y >0 ) :
                     self.x += self.vel_x
                     self.y += self.vel_y
                     time.sleep(0.5)
                     pygame.draw.rect(self.screen, RED, (self.x * CELL_SIZE, self.y * CELL_SIZE, CELL_SIZE, CELL_SIZE))
                     pygame.display.flip()
             else:
-                print("Obstacles Everywhere, Backtracking")
                 backtrack = path_forward[::-1]
                 for i,j in backtrack:
                     time.sleep(0.5)
                     self.x = j 
                     self.y = i
-                    print(self.x+1,self.y,self.checkpoint)
                     pygame.draw.rect(self.screen, GREEN, (j * CELL_SIZE, i * CELL_SIZE, CELL_SIZE, CELL_SIZE))
                     pygame.display.flip()
                     if (self.x+1 == self.checkpoint[0]) and (self.y == self.checkpoint[1]):
@@ -245,15 +229,17 @@ class Slave(Node):
         else:
             print("Error: self.obstacles is not a list of tuples.")
 
-def main():
-    rclpy.init()
+
+def main(args=None):
+    rclpy.init(args=args)
     screen = pygame.display.set_mode((WIDTH * CELL_SIZE, HEIGHT * CELL_SIZE))
     pygame.display.set_caption("Right_Drone_Grid")
 
     right_drone = Slave("left", screen)
+    print("Subscribed")
     right_drone.subscribe_init()
     print(right_drone.det_data)
-    print("Subscribed")
+    data = right_drone.det_data
 
     right_drone.process_data()
     
@@ -268,20 +254,18 @@ def main():
                 running = False
 
         screen.fill(WHITE)
-
         for x in range(0, WIDTH * CELL_SIZE, CELL_SIZE):
             pygame.draw.line(screen, BLACK, (x, 0), (x, HEIGHT * CELL_SIZE))
         for y in range(0, HEIGHT * CELL_SIZE, CELL_SIZE):
             pygame.draw.line(screen, BLACK, (0, y), (WIDTH * CELL_SIZE, y))
         for obstacle in obstacles:
             pygame.draw.rect(screen, BLACK, (obstacle[0] * CELL_SIZE, obstacle[1] * CELL_SIZE, CELL_SIZE, CELL_SIZE))
+        pygame.display.flip()
+        pygame.display.update()
 
         right_drone.slam(right_drone.det_data[-1],[right_drone.det_data[0],right_drone.det_data[1]])
         print("Slam_Complete, Waiting for Master_Callback")
         running = False
-
-        pygame.display.flip()
-        time.sleep(1)
 
     #back_to_master
     right_drone.subscribe_mast_init()
@@ -318,7 +302,9 @@ def main():
         # time.sleep(20)
         running=False
 
+    rclpy.spin(right_drone)
     rclpy.shutdown()
-
+    pygame.quit()
+  
 if __name__ == "__main__":
     main()
