@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/janhavi/drone_swarm_py/src/swarm_com
+CMAKE_SOURCE_DIR = /home/janhavi/pygame_drone_swarm2_not_used/src/swarm_com
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/janhavi/drone_swarm_py/build/swarm_com
+CMAKE_BINARY_DIR = /home/janhavi/pygame_drone_swarm2_not_used/build/swarm_com
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/janhavi/drone_swarm_py/build/swarm_com/CMakeFiles /home/janhavi/drone_swarm_py/build/swarm_com//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/janhavi/pygame_drone_swarm2_not_used/build/swarm_com/CMakeFiles /home/janhavi/pygame_drone_swarm2_not_used/build/swarm_com//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/janhavi/drone_swarm_py/build/swarm_com/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/janhavi/pygame_drone_swarm2_not_used/build/swarm_com/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
