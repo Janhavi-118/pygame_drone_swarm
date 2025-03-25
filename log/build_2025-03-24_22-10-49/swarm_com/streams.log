@@ -1,0 +1,58 @@
+[0.006s] Invoking command in '/home/janhavi/pygame_drone_swarm/build/swarm_com': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/janhavi/pygame_drone_swarm/src/swarm_com -DCMAKE_INSTALL_PREFIX=/home/janhavi/pygame_drone_swarm/install/swarm_com
+[0.086s] -- The C compiler identification is GNU 11.4.0
+[0.159s] -- The CXX compiler identification is GNU 11.4.0
+[0.170s] -- Detecting C compiler ABI info
+[0.222s] -- Detecting C compiler ABI info - done
+[0.226s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.227s] -- Detecting C compile features
+[0.228s] -- Detecting C compile features - done
+[0.230s] -- Detecting CXX compiler ABI info
+[0.290s] -- Detecting CXX compiler ABI info - done
+[0.295s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.295s] -- Detecting CXX compile features
+[0.295s] -- Detecting CXX compile features - done
+[0.300s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.559s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.635s] -- Found rclpy: 3.3.15 (/opt/ros/humble/share/rclpy/cmake)
+[0.636s] -- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)
+[0.662s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.665s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.671s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.680s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.691s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.709s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.718s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.767s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.767s] -- Added test 'lint_cmake' to check CMake code style
+[0.767s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.768s] -- Added test 'xmllint' to check XML markup files
+[0.769s] -- Configuring done
+[0.771s] -- Generating done
+[0.772s] -- Build files have been written to: /home/janhavi/pygame_drone_swarm/build/swarm_com
+[0.776s] Invoked command in '/home/janhavi/pygame_drone_swarm/build/swarm_com' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/janhavi/pygame_drone_swarm/src/swarm_com -DCMAKE_INSTALL_PREFIX=/home/janhavi/pygame_drone_swarm/install/swarm_com
+[0.777s] Invoking command in '/home/janhavi/pygame_drone_swarm/build/swarm_com': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/janhavi/pygame_drone_swarm/build/swarm_com -- -j12 -l12
+[0.805s] Invoked command in '/home/janhavi/pygame_drone_swarm/build/swarm_com' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/janhavi/pygame_drone_swarm/build/swarm_com -- -j12 -l12
+[0.810s] Invoking command in '/home/janhavi/pygame_drone_swarm/build/swarm_com': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/janhavi/pygame_drone_swarm/build/swarm_com
+[0.814s] -- Install configuration: ""
+[0.814s] -- Installing: /home/janhavi/pygame_drone_swarm/install/swarm_com/lib/swarm_com/bottom_slave_lvl1.py
+[0.814s] -- Installing: /home/janhavi/pygame_drone_swarm/install/swarm_com/lib/swarm_com/front_slave_lvl1.py
+[0.815s] -- Installing: /home/janhavi/pygame_drone_swarm/install/swarm_com/lib/swarm_com/left_slave_lvl1.py
+[0.815s] -- Installing: /home/janhavi/pygame_drone_swarm/install/swarm_com/lib/swarm_com/master_lvl1.py
+[0.815s] -- Installing: /home/janhavi/pygame_drone_swarm/install/swarm_com/lib/swarm_com/right_slave_lvl1.py
+[0.815s] -- Installing: /home/janhavi/pygame_drone_swarm/install/swarm_com/lib/swarm_com/bottom_slave_lvl2.py
+[0.815s] -- Installing: /home/janhavi/pygame_drone_swarm/install/swarm_com/lib/swarm_com/front_slave_lvl2.py
+[0.815s] -- Installing: /home/janhavi/pygame_drone_swarm/install/swarm_com/lib/swarm_com/left_slave_lvl2.py
+[0.815s] -- Installing: /home/janhavi/pygame_drone_swarm/install/swarm_com/lib/swarm_com/master_lvl2.py
+[0.815s] -- Installing: /home/janhavi/pygame_drone_swarm/install/swarm_com/lib/swarm_com/right_slave_lvl2.py
+[0.815s] -- Installing: /home/janhavi/pygame_drone_swarm/install/swarm_com/lib/swarm_com/bottom_slave_lvl3.py
+[0.815s] -- Installing: /home/janhavi/pygame_drone_swarm/install/swarm_com/lib/swarm_com/front_slave_lvl3.py
+[0.815s] -- Installing: /home/janhavi/pygame_drone_swarm/install/swarm_com/lib/swarm_com/left_slave_lvl3.py
+[0.815s] -- Installing: /home/janhavi/pygame_drone_swarm/install/swarm_com/lib/swarm_com/master_lvl3.py
+[0.815s] -- Installing: /home/janhavi/pygame_drone_swarm/install/swarm_com/lib/swarm_com/right_slave_lvl3.py
+[0.815s] [31mCMake Error at cmake_install.cmake:46 (file):
+[0.816s]   file INSTALL cannot find
+[0.816s]   "/home/janhavi/pygame_drone_swarm/src/swarm_com/src/door_detector_lvl3.py":
+[0.816s]   No such file or directory.
+[0.816s] 
+[0.816s] [0m
+[0.816s] Invoked command in '/home/janhavi/pygame_drone_swarm/build/swarm_com' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/janhavi/pygame_drone_swarm/build/swarm_com

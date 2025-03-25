@@ -25,11 +25,21 @@ endif()
 
 install(
   PROGRAMS
-    src/bottom_slave.py
-    src/front_slave.py
-    src/left_slave.py
-    src/master.py
-    src/right_slave.py
+    src/bottom_slave_lvl1.py
+    src/front_slave_lvl1.py
+    src/left_slave_lvl1.py
+    src/master_lvl1.py
+    src/right_slave_lvl1.py
+    src/bottom_slave_lvl2.py
+    src/front_slave_lvl2.py
+    src/left_slave_lvl2.py
+    src/master_lvl2.py
+    src/right_slave_lvl2.py
+    src/bottom_slave_lvl3.py
+    src/front_slave_lvl3.py
+    src/left_slave_lvl3.py
+    src/master_lvl3.py
+    src/right_slave_lvl3.py
     src/door_detector.py
   DESTINATION lib/${PROJECT_NAME}
 )

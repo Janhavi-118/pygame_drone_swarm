@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/janhavi/pygame_drone_swarm2_not_used/src/swarm_com
+CMAKE_SOURCE_DIR = /home/janhavi/pygame_drone_swarm/src/swarm_com
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/janhavi/pygame_drone_swarm2_not_used/build/swarm_com
+CMAKE_BINARY_DIR = /home/janhavi/pygame_drone_swarm/build/swarm_com
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/janhavi/pygame_drone_swarm2_not_used/build/swarm_com && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/janhavi/pygame_drone_swarm2_not_used/src/swarm_com /home/janhavi/pygame_drone_swarm2_not_used/src/swarm_com /home/janhavi/pygame_drone_swarm2_not_used/build/swarm_com /home/janhavi/pygame_drone_swarm2_not_used/build/swarm_com /home/janhavi/pygame_drone_swarm2_not_used/build/swarm_com/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/janhavi/pygame_drone_swarm/build/swarm_com && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/janhavi/pygame_drone_swarm/src/swarm_com /home/janhavi/pygame_drone_swarm/src/swarm_com /home/janhavi/pygame_drone_swarm/build/swarm_com /home/janhavi/pygame_drone_swarm/build/swarm_com /home/janhavi/pygame_drone_swarm/build/swarm_com/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

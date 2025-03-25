@@ -1,0 +1,6 @@
+[31mCMake Error at cmake_install.cmake:46 (file):
+  file INSTALL cannot find
+  "/home/janhavi/pygame_drone_swarm/src/swarm_com/src/door_detector_lvl3.py":
+  No such file or directory.
+
+[0m
