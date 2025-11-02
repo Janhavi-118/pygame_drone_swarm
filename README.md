@@ -1,4 +1,4 @@
-# Pygame Drone Swarm Simulation
+# Autonomous Exploration of Unknown Indoor Environments Using Multi-UAV System : The Pygame Simulation
 
 Pygame-based **2D visualization and communication framework** for autonomous multi-UAV (Unmanned Aerial Vehicles) indoor exploration systems. This project provides a lightweight, real-time visualization tool for drone swarm behavior and inter-drone communication patterns.
 
@@ -9,6 +9,8 @@ Pygame-based **2D visualization and communication framework** for autonomous mul
 This pygame simulation focuses on **2D communication layer visualization** and **swarm coordination behavior**. It demonstrates how the master-slave architecture orchestrates drone swarm behavior including formation control, door detection signaling, battery-aware navigation decisions, and real-time map fusion without the overhead of 3D physics simulation.
 
 The simulation models drone-to-drone communication using a **ROS2-inspired Publisher-Subscriber pattern** in 2D space, allowing rapid prototyping and testing of coordination algorithms before deploying to the full Gazebo simulator.
+
+![Simulation Visualization](fig1.jpg)
 
 ## Related Projects
 
