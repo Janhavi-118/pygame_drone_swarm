@@ -10,8 +10,6 @@ This pygame simulation focuses on **2D communication layer visualization** and *
 
 The simulation models drone-to-drone communication using a **ROS2-inspired Publisher-Subscriber pattern** in 2D space, allowing rapid prototyping and testing of coordination algorithms before deploying to the full Gazebo simulator.
 
-![Simulation Visualization](fig1.jpg)
-
 ## Related Projects
 
 This project is part of the **Autonomous Exploration of Unknown Indoor Environments Using Multi-UAV System** research:
